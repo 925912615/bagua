@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.btn{
+  display: block;
+  width: 60px;
+  height: 30px;
+  margin: 200px auto;
+}
+.msgbox{
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  background:#F7D5D5;
+  opacity: .8;
+  border-radius: 5px;
+  padding: 10px;
+  padding-right: 20px;
+  animation: animation .5s;
+}
+@keyframes animation1 {
+  0%{
+    top: 100px;
+  }
+  30%{
+    top:50px;
+  }
+  45%{
+    top: 40px;
+  }
+  55%{
+    top: 60px;
+  }
+  65%{
+    top: 40px;
+  }
+  75%{
+    top: 60px;
+  }
+  100%{
+    top: 50px;
+  }
+}
+
+@keyframes animation {
+  from{
+    top: 60px;
+  }
+  to{
+    top: 50px;
+  }
+}
+
+.msgbox .close{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 510px;
+  text-align: center;
+  line-height: 20px;
+  cursor: default;
+  color: #DD5555;
+}
+.msgbox .close:hover{
+  color: #ccc;
+}
+.msgbox .text{
+  font-size: 14px;
+  color: #DD5555;
+}

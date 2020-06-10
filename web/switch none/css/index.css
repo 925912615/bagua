@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.box{
+  width: 100px;
+  height: 100px;
+  margin: 50px auto;
+}
+.switch{
+  width: 40px;
+  height: 20px;
+  display: inline-block;
+  background: #ccc;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.switch>input{
+  visibility: hidden;
+}
+.switch>span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  border-radius: 50%;
+  background: white;
+  transition: all 0.3s;
+}
+.switch>span::before{
+  position: absolute;
+  content: '';
+  width: 200%;
+  height: 100%;
+  background: blue;
+  top: 0;
+  left: -100%;
+  border-radius: 20px;
+}
+.switch>span::after{
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+}
+.switch input:checked +span{
+  transform: translateX(100%);
+}

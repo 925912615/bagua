@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" charset="utf-8"></script>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding 0;
+      }
+      .progress{
+        width: 200px;
+        height: 50px;
+        background: #999;
+        margin: 50px auto;
+        position: relative;
+        border-radius: 10px;
+      }
+      .progress_bar{
+        height: 50px;
+        width: 0;
+        background: green;
+        border-radius: 10px;
+      }
+      #btn2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress">
+      <div class="progress_bar">
+        <span id="btn2" type="button" name="button">0%</span>
+      </div>
+    </div>
+    <div class="box">
+      <button id="btn1" type="button" name="button">开始</button>
+    </div>
+  </body>
+</html>

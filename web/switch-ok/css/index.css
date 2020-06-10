@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.box{
+  width: 500px;
+  height: 400px;
+  margin: 50px auto;
+}
+.box .switch{
+  display: block;
+  width: 400px;
+  height: 200px;
+  background: red;
+  position: relative;
+  border-radius: 100px;
+  border: 4px solid red;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+.switch input{
+  visibility: hidden;
+}
+.switch span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.3s;
+}
+.switch input:checked +span{
+  transform: translateX(100%);
+}

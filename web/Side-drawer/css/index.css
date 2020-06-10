@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.side{
+  height: 300px;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: -200px;
+  background: blue;
+  z-index: 100;
+}
+.side.show{
+  animation: show .5s forwards;
+}
+.side.hide{
+  animation: hide .5s forwards;
+}
+@keyframes show {
+  0%{
+    left: -200px;
+  }
+  100%{
+    left: 0px;
+  }
+}
+
+@keyframes hide {
+  0%{
+    left: 0px;
+  }
+  100%{
+    left: -200px;
+  }
+}
+.mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: #ccc; */
+  opacity: .8;
+  z-index: 99;
+  display: none;
+}

@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.box{
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 5px;
+}
+.show{
+  animation: show 0.3s forwards;
+}
+.hide{
+  animation: hide 0.3s forwards;
+}
+@keyframes show{
+  0%{
+    top: 80px;
+    opacity: 0;
+  }
+  100%{
+    top: 100px;
+    opacity: 1;
+  }
+}
+@keyframes hide{
+  0%{
+    top: 100px;
+    opacity: 1;
+  }
+  100%{
+    top: 80px;
+    opacity: 0;
+  }
+}
+.box .header,.container,.footer{
+  width: 400px;
+  height: 50px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.box .header{
+  font-size: 20px;
+}
+.header .close{
+  float: right;
+  margin-top: -5px;
+  cursor: pointer;
+  color: #ccc;
+}
+.header .close:hover{
+  color: #29C1E8;
+}
+.box .container{
+  height: 100px;
+  color: #666;
+}
+.box .footer{
+  text-align: right;
+  height: 80px;
+}
+.footer>button{
+  display: inline-block;
+  width: 70px;
+  height: 40px;
+  cursor: pointer;
+}
+.footer .cancel{
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  box-sizing: border-box;
+}
+.footer .cancel:hover{
+  background: #E0F6FC;
+  border-color: #85DCF2;
+  color: #29C1E8;
+}
+.footer .sure{
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-left: 20px;
+  background: #18B0D7;
+  color: white;
+}
+.footer .sure:hover{
+  opacity: 0.7;
+}
+.footer .sure:active{
+  opacity: 1;
+}
+.mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  display: none;
+}
+.maskhide{
+  animation: maskhide 0.3s forwards;
+}
+.maskshow{
+  animation: maskshow 0.3s forwards;
+}
+@keyframes maskhide{
+  0%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes maskshow{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0.5;
+  }
+}

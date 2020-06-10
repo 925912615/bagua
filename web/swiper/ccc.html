@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .box{
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        margin: 50px auto;
+        position: absolute;
+      }
+    </style>
+    <script>
+      window.onload=function(){
+        let box = document.getElementsByClassName('box')[0];
+        setInterval(function(){
+          box.style.left = box.offsetLeft + 2 + 'px';
+        },30);
+
+      }
+    </script>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
